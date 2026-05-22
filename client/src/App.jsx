@@ -71,7 +71,7 @@ export default function App() {
 
       </section>
 
-      {/* VIDEO */}
+      {/* VIDEO SECTION */}
 
       <section className={`video-section ${startVideo ? "show-video" : ""}`}>
 
@@ -80,6 +80,8 @@ export default function App() {
           className="bg-video"
           loop
           playsInline
+          preload="auto"
+          muted
         >
           <source src="/reel.mp4" type="video/mp4" />
         </video>
@@ -88,7 +90,54 @@ export default function App() {
 
       </section>
 
+      {/* HOME PAGE */}
+      <section className="home">
+
+  {/* NAVBAR */}
+
+  <nav className="navbar">
+
+    <div className="nav-logo">
+      FRAME<span>-X</span>
     </div>
 
+    <div className="nav-links">
+      <a href="#About">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#projects">Projects</a>
+      <a href="#team">Team</a>
+      <a href="#join">Join</a>
+    </div>
+
+  </nav>
+
+  {/* HERO CONTENT */}
+
+  <div className="hero-content">
+
+    <p className="small-heading">
+      THE FILMMAKING AND VIDEO EDITING SOCIETY
+    </p>
+
+    <div className="red-line"></div>
+
+    <h2>
+      STORIES BEYOND FRAMES
+    </h2>
+
+    <p className="hero-text">
+      Our approach combines expertise & passion with a 
+      deep understanding of you and your audience to make 
+      videos that engage, inspire people to act.
+    </p>
+
+    <button className="hero-btn">
+      WATCH INTRO
+    </button>
+
+  </div>
+
+</section>
+    </div>
   );
 }

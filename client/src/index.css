@@ -14,7 +14,7 @@ body{
 /* PAGE */
 
 .page{
-  height:200vh;
+  position:relative;
 }
 
 /* INTRO */
@@ -78,7 +78,7 @@ body{
   animation:pulse 6s ease-in-out infinite;
 }
 
-/* CONTENT */
+/* INTRO CONTENT */
 
 .intro-content{
   position:relative;
@@ -156,9 +156,11 @@ body{
 /* VIDEO */
 
 .video-section{
-  position:fixed;
+  position:relative;
 
-  inset:0;
+  height:100vh;
+
+  overflow:hidden;
 
   opacity:0;
 
@@ -201,41 +203,176 @@ body{
   );
 }
 
-/* FLOAT */
+/* HOME PAGE */
 
-@keyframes float{
+.home{
+  position:relative;
 
-  0%{
-    transform:translateY(0);
-  }
+  min-height:100vh;
 
-  50%{
-    transform:translateY(-10px);
-  }
+  margin-top:0px;
 
-  100%{
-    transform:translateY(0);
-  }
+  background-image:
+  linear-gradient(
+    rgba(0,0,0,0.55),
+    rgba(0,0,0,0.45)
+  ),
+  url("/hero-bg.png");
 
+  background-size:cover;
+
+  background-position:center;
+
+  background-repeat:no-repeat;
+
+  padding:40px 70px;
+
+  overflow:hidden;
 }
 
-/* PULSE */
+/* NAVBAR */
 
-@keyframes pulse{
+.navbar{
+  display:flex;
 
-  0%{
-    opacity:0.5;
-    transform:translateX(-50%) scale(1);
-  }
+  justify-content:space-between;
+  align-items:center;
+}
 
-  50%{
-    opacity:1;
-    transform:translateX(-50%) scale(1.1);
-  }
+/* LOGO */
 
-  100%{
-    opacity:0.5;
-    transform:translateX(-50%) scale(1);
-  }
+.nav-logo{
+  font-size:1.5rem;
 
+  font-weight:700;
+  margin-left:40px;
+
+  color:white;
+
+  letter-spacing:2px;
+}
+
+.nav-logo span{
+  color:#ff2a2a;
+}
+
+/* LINKS */
+
+.nav-links{
+  display:flex;
+
+  gap:60px;
+  margin-right:20px;
+}
+
+.nav-links a{
+  color:white;
+
+  text-decoration:none;
+
+  font-size:0.9rem;
+
+  letter-spacing:3px;
+
+  opacity:0.8;
+
+  transition:0.3s ease;
+}
+
+.nav-links a:hover{
+  color:#ff2a2a;
+}
+
+/* Image */
+
+.hero-content{
+
+  width:55%;
+
+  margin-top:180px;
+
+  margin-left:40px;
+}
+
+/* SMALL TITLE */
+
+.small-heading{
+  font-size:0.85rem;
+
+  letter-spacing:2px;
+
+  opacity:0.7;
+
+  margin-bottom:20px;
+}
+
+/* RED LINE */
+
+.red-line{
+  width:60px;
+  height:3px;
+
+  background:#ff2a2a;
+
+  margin-bottom:35px;
+}
+
+/* BIG TITLE */
+
+.hero-content h2{
+
+  font-size:2.9rem;
+
+  line-height:1.05;
+
+  font-weight:700;
+
+  color:white;
+
+  margin-bottom:35px;
+
+  width:120%;
+}
+
+/* DESCRIPTION */
+
+.hero-text{
+
+  font-size:0.9rem;
+
+  line-height:1.9;
+
+  opacity:0.75;
+
+  width:90%;
+
+  margin-bottom:45px;
+}
+
+/* BUTTON */
+
+.hero-btn{
+
+  padding:10px 20px;
+
+  background:#ff2a2a;
+
+  color:white;
+
+  border:none;
+
+  font-size:0.9rem;
+
+  letter-spacing:3px;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
+}
+
+.hero-btn:hover{
+
+  background:#ff4d4d;
+
+  transform:translateY(-4px);
 }
