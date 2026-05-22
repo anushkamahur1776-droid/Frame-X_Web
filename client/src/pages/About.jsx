@@ -2,6 +2,8 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "./About.css"; 
 
+import logoImg from "../assets/logo.png";
+
 export default function About() {
   const watermarkText = "ABOUT FRAME-X ".repeat(60);
 
@@ -91,6 +93,78 @@ export default function About() {
           </div>
         </div>
       </section>
+
+      {/* --- NEW NESTED CARDS SECTION --- */}
+      <section className="nested-cards-section">
+        
+        {/* Card 1: Our Evolution (Purple/Pink) */}
+        <motion.div 
+          className="nested-card purple-card"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          {/* Left Side: Image */}
+          <div className="inner-box pink-box image-box">
+            <p>[Image Placeholder]</p>
+          </div>
+          
+          {/* Right Side: Text */}
+          <div className="inner-box pink-box text-box">
+            <h2>OUR EVOLUTION</h2>
+            <p>
+              We started as a small group of enthusiasts and grew into FRAME-X to match today's limitless creativity. We now go beyond films into scriptwriting, digital arts, storytelling, photography, and all things cinematic culture.
+              <br/><br/>
+              Each year, we engage our growing community and partner with peers to create culture-first content. In a noisy market, we stand out by building powerful projects, blending genres, and launching short films that truly connect with people.
+              <br/><br/>
+              Fueled by creators and clear purpose, we're here to shape what matters next.
+            </p>
+          </div>
+        </motion.div>
+
+        {/* Card 2: What We Do (Orange/Yellow) */}
+        <motion.div 
+          className="nested-card orange-card"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true, margin: "-100px" }}
+        >
+          {/* Left Side: Text */}
+          <div className="inner-box yellow-box text-box">
+            <h2>WHAT WE DO</h2>
+            <h3>FRAME-X CHALLENGES AND FESTIVALS</h3>
+            <p>
+              We host an array of competitions, workshops, and flagship events that push creators to their limits. From 48-hour filmmaking challenges to masterclasses in post-production editing, we provide the platform for you to showcase your talent.
+            </p>
+          </div>
+
+          {/* Right Side: Image */}
+          <div className="inner-box yellow-box image-box">
+            <p>[Image Placeholder]</p>
+          </div>
+        </motion.div>
+
+      </section>
+
+      {/* --- NEW FOOTER SECTION --- */}
+      <footer className="site-footer">
+        <div className="footer-content">
+          <div className="footer-left">
+            <h2>FRAME-X</h2>
+            <p>Shaping Cinema One Frame at a Time &nbsp;|&nbsp; Copyright 2026</p>
+            <p className="creator-credit">Website Developed by Anushka Mahur (Secretary, 2025-26)</p>
+          </div>
+          
+          <div className="footer-right">
+            <div className="footer-logo-placeholder">
+              <span><img src={logoImg} alt="FRAME-X Logo" className="footer-logo" /></span>
+            </div>
+          </div>
+        </div>
+      </footer>
+
     </div>
   );
 }

@@ -8,10 +8,12 @@ import Team from "./pages/Team";
 import Projects from "./pages/Projects";
 import Gallery from "./pages/Gallery";
 import Join from "./pages/Join";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
     return (
       <>
+        <ScrollToTop />
         {/* Drop the Navbar right here! */}
         <Navbar />
 
