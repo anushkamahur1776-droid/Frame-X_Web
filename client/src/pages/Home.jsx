@@ -102,11 +102,11 @@ export default function Home() {
     </div>
 
     <div className="nav-links">
-      <a href="/About">About</a>
-      <a href="/gallery">Gallery</a>
-      <a href="/projects">Projects</a>
-      <a href="/team">Team</a>
-      <a href="/join">Join</a>
+      <a href="/About"></a>
+      <a href="/gallery"></a>
+      <a href="/projects"></a>
+      <a href="/team"></a>
+      <a href="/join"></a>
     </div>
 
   </nav>
