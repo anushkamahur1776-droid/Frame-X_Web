@@ -3,68 +3,97 @@ import { motion } from "framer-motion";
 import "./About.css"; 
 
 export default function About() {
-  // These are Framer Motion "variants". They let us reuse animation settings.
-  const textReveal = {
-    hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.2, delayChildren: 0.1 }
-    }
-  };
+  const watermarkText = "ABOUT FRAME-X ".repeat(60);
 
   return (
-    <div className="about-container">
+    <div className="about-page">
       
-      {/* 1. HERO SECTION */}
+      {/* First red box */}
       <motion.section 
-        className="about-hero"
-        initial="hidden"
-        animate="visible"
-        variants={staggerContainer}
+        className="hero-box"
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
-        <motion.h1 variants={textReveal} className="about-title">
-          Beyond the <span className="accent-text">Frame</span>.
-        </motion.h1>
-        <motion.p variants={textReveal} className="about-subtitle">
-          We are FRAME-X, the official filmmaking and video editing club of IIT Jodhpur.
-        </motion.p>
-      </motion.section>
+        <div className="hero-box-watermark">
+          {watermarkText}
+        </div>
 
-      {/* 2. SCROLL-REVEAL MISSION SECTION */}
-      <section className="about-mission">
-        <motion.div 
-          className="mission-content"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }} // Triggers when 100px away
-          variants={staggerContainer}
-        >
-          <motion.div variants={textReveal} className="accent-line"></motion.div>
-          <motion.h2 variants={textReveal}>Our Vision</motion.h2>
-          <motion.p variants={textReveal}>
-            We believe in the power of visual storytelling. From scripting and cinematic photography to advanced post-production, we push the boundaries of digital media. No clutter, just pure cinema.
-          </motion.p>
-        </motion.div>
-      </section>
-
-      {/* 3. CINEMATIC MEDIA CONTAINER */}
-      <motion.section 
-        className="about-media"
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1, ease: "easeOut" }}
-        viewport={{ once: true }}
-      >
-        <div className="media-placeholder">
-          <p>Cinematic Reel Placeholder</p>
+        <div className="hero-box-content">
+          <h1 className="hero-box-title">WHO WE ARE</h1>
+          <p className="hero-box-description">
+            Frame-X is a cultural society that celebrates creativity under filmmaking. 
+            From storytelling and design to music, film, and beyond — we exist to build 
+            a thriving ecosystem for creators and communities.
+          </p>
         </div>
       </motion.section>
 
+      {/*  NEW ACHIEVEMENTS SECTION  */}
+      <section className="achievements-wrapper">
+        <div className="achievements-container">
+          
+          {/* ANIMATED YELLOW BOX */}
+          <motion.div 
+            className="sticky-yellow-box"
+            initial={{ opacity: 0, x: -50 }} // Slides in from the left
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            <h2>HERE IS WHAT WE HAVE ACHIEVED SO FAR</h2>
+          </motion.div>
+
+          {/* ANIMATED GREEN STAT BOXES */}
+          <div className="stats-grid">
+            
+            <motion.div 
+              className="stat-box"
+              initial={{ opacity: 0, y: 50 }} // Slides up from the bottom
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <h3>15 YEARS</h3>
+              <p>That we've been shaping culture for</p>
+            </motion.div>
+
+            <motion.div 
+              className="stat-box"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }} // Notice the delay!
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <h3>200+</h3>
+              <p>Creative Enthusiasts who make our community</p>
+            </motion.div>
+
+            <motion.div 
+              className="stat-box"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <h3>10k+</h3>
+              <p>People we reach every month on social media</p>
+            </motion.div>
+
+            <motion.div 
+              className="stat-box"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <h3>6+</h3>
+              <p>Collaborative Projects so far</p>
+            </motion.div>
+
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

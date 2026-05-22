@@ -1,90 +1,169 @@
 /* src/pages/About.css */
 
-.about-container {
-  background-color: #000;
-  color: #fff;
+.about-page {
+  background-color: #000000; /* Deep black background */
   min-height: 100vh;
-  padding-top: 80px;
+  padding-top: 120px; 
+  padding-bottom: 100px;
   overflow-x: hidden;
 }
 
-/* Hero Section */
-.about-hero {
-  height: 80vh;
+.hero-box {
+  position: relative;
+  background-color: #ff2a2a; /* The exact FRAME-X red from your palette */
+  margin: 0 4vw; 
+  border-radius: 40px; 
+  padding: 150px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden; 
+  box-shadow: 0 20px 50px rgba(255, 90, 90, 0.2); /* Red glow */
+}
+
+/* Black transparent outline for the watermark pattern */
+.hero-box-watermark {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  font-family: 'Arial Black', Impact, sans-serif; /* Heavy block font */
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.1;
+  text-transform: uppercase;
+  word-break: break-all;
+  
+  color: transparent;
+  -webkit-text-stroke: 2px rgba(0, 0, 0, 0.15); 
+  
+  z-index: 1;
+  pointer-events: none; 
+  user-select: none;
+}
+
+.hero-box-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px; /* Wider to accommodate the exact text structure */
+  padding: 0 0px;
+}
+
+/* Massive, blocky black text */
+.hero-box-title {
+  color: #000000; 
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: clamp(5rem, 6vw, 6rem); 
+  font-weight: 1000;
+  /* letter-spacing: 1px; */
+  /* margin-bottom: 0px; */
+  line-height: 2;
+  text-transform: uppercase;
+}
+
+/* Cleaner, bold secondary font for readability */
+.hero-box-description {
+  color: #ffffff; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(0rem, 1.3vw, 1.4rem);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* --- NEW ACHIEVEMENTS SECTION --- */
+
+.achievements-wrapper {
+  padding: 100px 4vw; /* Matches the margin of your red box */
+  margin-top: 50px;
+}
+
+.achievements-container {
+  display: flex;
+  gap: 40px;
+  position: relative;
+  /* CRITICAL: flex-start allows the child elements to have different heights, which makes sticky work */
+  align-items: flex-start; 
+}
+
+/* The Left Panel */
+.sticky-yellow-box {
+  position: sticky;
+  top: 120px; /* Locks it exactly below your navbar */
+  width: 45%;
+  height: 80vh; /* Gives it that massive, imposing height */
+  background-color: #ffc800; /* IFP Yellow */
+  border-radius: 40px;
+  padding: 60px 50px;
+  display: flex;
+  align-items: center; /* Vertically centers the text */
+}
+
+.sticky-yellow-box h2 {
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: clamp(3rem, 4vw, 5.5rem);
+  color: #000000;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: -2px;
+}
+
+/* The Right Panel Grid */
+.stats-grid {
+  width: 30%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columns */
+  gap: 20px;
+  /* Adding some padding to the bottom so you can scroll past the last boxes */
+  padding-bottom: 20vh; 
+}
+
+.stat-box {
+  background-color: #39ff14; /* IFP Neon Green */
+  border-radius: 30px;
+  padding: 40px 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 0 10vw;
+  aspect-ratio: 1; /* Makes them perfect squares */
 }
 
-.about-title {
-  /* clamp() makes the font dynamically scale between mobile and desktop */
-  font-size: clamp(3.5rem, 8vw, 8rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -2px;
-  margin-bottom: 20px;
-}
-
-.accent-text {
-  color: #e8b894; /* Custom cinematic peach/orange accent */
-}
-
-.about-subtitle {
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  opacity: 0.7;
-  max-width: 600px;
-  letter-spacing: 1px;
-  line-height: 1.6;
-}
-
-/* Mission Section */
-.about-mission {
-  padding: 150px 10vw;
-  background: linear-gradient(to bottom, #000, #0a0a0a);
-}
-
-.mission-content {
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.accent-line {
-  width: 80px;
-  height: 4px;
-  background-color: #e8b894;
-  margin-bottom: 40px;
-}
-
-.about-mission h2 {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 30px;
+.stat-box h3 {
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: clamp(2.5rem, 3vw, 4rem);
+  color: #000000;
+  margin-bottom: 15px;
   letter-spacing: -1px;
 }
 
-.about-mission p {
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  line-height: 1.8;
-  opacity: 0.8;
+.stat-box p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 700;
+  color: #000000;
+  line-height: 1.4;
 }
 
-/* Media/Reel Section */
-.about-media {
-  padding: 0 5vw 150px 5vw;
-}
-
-.media-placeholder {
-  width: 100%;
-  height: 70vh;
-  background: #0f0f0f;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-  opacity: 0.6;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  border: 1px solid #1a1a1a;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+/* Make it stack on mobile screens! */
+@media (max-width: 900px) {
+  .achievements-container {
+    flex-direction: column;
+  }
+  .sticky-yellow-box {
+    position: relative; /* Turns off sticky on mobile */
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 60px 30px;
+  }
+  .stats-grid {
+    width: 100%;
+    grid-template-columns: 1fr; /* 1 column on mobile */
+    padding-bottom: 50px;
+  }
+  .stat-box {
+    aspect-ratio: auto;
+    min-height: 250px;
+  }
 }
