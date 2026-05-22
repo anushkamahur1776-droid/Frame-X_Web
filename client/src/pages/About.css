@@ -5,7 +5,7 @@
   min-height: 100vh;
   padding-top: 120px; 
   padding-bottom: 100px;
-  overflow-x: hidden;
+  /* overflow-x: hidden; <-- Removed so position: sticky can work! */
 }
 
 .hero-box {
@@ -13,8 +13,10 @@
   background-color: #ff2a2a; /* The exact FRAME-X red from your palette */
   margin: 0 4vw; 
   border-radius: 40px; 
-  padding: 150px 20px;
+  padding: 10px 20px;
   display: flex;
+  height: 80vh; 
+  margin-left: 4vw;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -57,8 +59,6 @@
   font-family: 'Arial Black', Impact, sans-serif;
   font-size: clamp(5rem, 6vw, 6rem); 
   font-weight: 1000;
-  /* letter-spacing: 1px; */
-  /* margin-bottom: 0px; */
   line-height: 2;
   text-transform: uppercase;
 }
@@ -74,33 +74,40 @@
 
 /* --- NEW ACHIEVEMENTS SECTION --- */
 
-.achievements-wrapper {
-  padding: 100px 4vw; /* Matches the margin of your red box */
-  margin-top: 50px;
+/* The Track: Gives you physical space to scroll */
+.scroll-sequence-container {
+  height: 400vh;
+  position: relative;
+  background-color: #000000;
+  margin-top: 30px;
 }
 
-.achievements-container {
+/* The Camera Lens: Locks to the screen */
+.sticky-viewport {
+  position: sticky;
+  top: 0;
+  height: 100vh;
   display: flex;
-  gap: 40px;
-  position: relative;
-  /* CRITICAL: flex-start allows the child elements to have different heights, which makes sticky work */
-  align-items: flex-start; 
+  /* align-items: center; */
+  padding-top: 12vh;
+  overflow: hidden; /* Hides the green boxes when they are offscreen to the right */
 }
 
 /* The Left Panel */
-.sticky-yellow-box {
-  position: sticky;
-  top: 120px; /* Locks it exactly below your navbar */
-  width: 45%;
-  height: 80vh; /* Gives it that massive, imposing height */
+.dynamic-yellow-box {
   background-color: #ffc800; /* IFP Yellow */
-  border-radius: 40px;
   padding: 60px 50px;
   display: flex;
-  align-items: center; /* Vertically centers the text */
+  align-items: center; 
+  z-index: 2;
+
+  height: 82vh; 
+  border-radius: 40px; 
+  margin-left: 4vw;
+  /* Width is controlled by Framer Motion JS */
 }
 
-.sticky-yellow-box h2 {
+.dynamic-yellow-box h2 {
   font-family: 'Arial Black', Impact, sans-serif;
   font-size: clamp(3rem, 4vw, 5.5rem);
   color: #000000;
@@ -111,12 +118,13 @@
 
 /* The Right Panel Grid */
 .stats-grid {
-  width: 30%;
+  position: absolute;
+  right: 18vw; /* Keeps your grid nicely aligned to the right side of the screen */
+  width: 30%; /* Kept your exact width */
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2 columns */
-  gap: 20px;
-  /* Adding some padding to the bottom so you can scroll past the last boxes */
-  padding-bottom: 20vh; 
+  gap: 20px; /* Kept your exact gap */
+  z-index: 1;
 }
 
 .stat-box {
@@ -145,25 +153,36 @@
   line-height: 1.4;
 }
 
-/* Make it stack on mobile screens! */
+/* Make it stack gracefully on mobile screens! */
 @media (max-width: 900px) {
-  .achievements-container {
-    flex-direction: column;
+  .scroll-sequence-container {
+    height: auto; 
+    margin-bottom: 100px;
   }
-  .sticky-yellow-box {
-    position: relative; /* Turns off sticky on mobile */
-    top: 0;
-    width: 100%;
+  .sticky-viewport {
+    position: relative; 
     height: auto;
+    flex-direction: column;
+    overflow: visible;
+  }
+  .dynamic-yellow-box {
+    width: 100% !important; /* Overrides Framer Motion inline styles for mobile */
+    height: auto !important;
+    border-radius: 40px !important;
+    margin-left: 0 !important;
     padding: 60px 30px;
   }
   .stats-grid {
+    position: relative;
+    right: 0;
     width: 100%;
     grid-template-columns: 1fr; /* 1 column on mobile */
     padding-bottom: 50px;
+    margin-top: 30px;
   }
   .stat-box {
     aspect-ratio: auto;
     min-height: 250px;
+    transform: none !important; /* Disables the right-slide on mobile so they just stack */
   }
 }
