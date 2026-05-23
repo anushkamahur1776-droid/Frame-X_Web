@@ -10,9 +10,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 5vw;
-  background-color: rgba(0, 0, 0, 0.85); /* Dark semi-transparent background */
-  backdrop-filter: blur(10px); /* The frosted glass effect */
-  z-index: 1000; /* Keeps it above all other content */
+  background-color: rgba(0, 0, 0, 0.85); 
+  backdrop-filter: blur(10px); 
+  z-index: 1000; 
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -25,29 +25,43 @@
 }
 
 .nav-logo span {
-  color: #e8b894; /* The custom cinematic accent color */
+  color: #ff2a2a; /* Matched to your FRAME-X red! */
+}
+
+/* Hidden by default on desktop */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  z-index: 2000; /* Keeps it above the sliding menu */
+}
+
+.hamburger div {
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  margin: 5px;
+  transition: all 0.3s ease;
 }
 
 .nav-links {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 600;
   letter-spacing: 1px;
   transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #e8b894;
+  color: #ff2a2a;
 }
 
-/* Special styling for the final call-to-action button */
 .nav-links .join-btn {
   background-color: #e8b894;
   color: #000;
@@ -60,4 +74,62 @@
   background-color: #fce1cc;
   color: #000;
   transform: translateY(-2px);
+}
+
+/* ========================================= */
+/* --- MOBILE RESPONSIVENESS ADDITIONS ---   */
+/* ========================================= */
+
+@media (max-width: 768px) {
+  
+  /* Show the hamburger icon */
+  .hamburger {
+    display: block;
+  }
+
+  /* Transform the links into a sliding full-screen menu */
+  .nav-links {
+    position: fixed;
+    right: -100%; /* Hides the menu off the right side of the screen */
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.95); /* Deep black background */
+    backdrop-filter: blur(15px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Big spacing for a cinematic feel */
+    transition: right 0.4s cubic-bezier(0.77, 0.2, 0.05, 1.0); /* Buttery smooth slide */
+  }
+
+  /* This class is added by React when the menu is open */
+  .nav-links.nav-active {
+    right: 0; 
+  }
+
+  /* Make the links massive for mobile tapping */
+  .nav-links a {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+
+  .nav-links .join-btn {
+    font-size: 1.2rem;
+    padding: 15px 40px;
+    margin-top: 20px;
+  }
+
+  /* --- Hamburger Animations --- */
+  /* Turns the three lines into an 'X' when open */
+  .toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+  }
+  .toggle .line2 {
+    opacity: 0;
+  }
+  .toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
 }

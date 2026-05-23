@@ -368,6 +368,8 @@ body{
   cursor:pointer;
 
   transition:0.3s ease;
+  display: inline-block;
+  text-decoration: none;
 }
 
 .hero-btn:hover{
@@ -377,3 +379,80 @@ body{
   transform:translateY(-4px);
 }
 
+
+/* ========================================= */
+/* --- MOBILE RESPONSIVENESS FIXES ---       */
+/* ========================================= */
+
+@media (max-width: 900px) {
+
+  /* --- 1. General Layout Fixes --- */
+  .home {
+    padding: 30px 20px; /* Reduced the massive 70px side padding */
+    min-height: auto;
+    padding-bottom: 80px;
+  }
+
+  /* --- 2. Intro Section Fixes (The Black Screen) --- */
+  .intro-content h1 {
+    font-size: clamp(3rem, 15vw, 5rem); /* Stops "FRAME X" from breaking the screen */
+    letter-spacing: 5px; /* Reduced tracking for smaller screens */
+  }
+
+  .logo-image {
+    width: 120px; /* Scaled down the red logo slightly */
+  }
+
+  .intro-content p {
+    font-size: 0.8rem; /* Scaled down the "Filmmaking Society" text */
+    padding: 0 15px; /* Added breathing room on the sides */
+  }
+
+  /* --- 3. Hero Section Fixes (The Main Page) --- */
+  .hero-content {
+    width: 100%; /* Overrides the 55% width so text can breathe */
+    margin-top: 100px;
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers everything on mobile */
+    text-align: center;
+  }
+
+  /* Centers the red line beneath the subtitle */
+  .red-line {
+    margin: 0 auto 25px auto; 
+  }
+
+  /* Fixes the "STORIES BEYOND FRAMES" text */
+  .hero-content h2 {
+    font-size: clamp(2.5rem, 10vw, 3.5rem); 
+    width: 100%; /* Overrides the 120% width which caused horizontal scrolling! */
+    margin-bottom: 25px;
+  }
+
+  /* Fixes the squished paragraph text */
+  .hero-text {
+    width: 100%; /* Allows the text to flow normally instead of squishing */
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+  
+  /* --- 4. Navbar Fixes --- */
+  /* If you are keeping the standard navbar on this page instead of the hamburger one */
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .nav-logo {
+    margin-left: 0;
+  }
+  
+  .nav-links {
+    margin-right: 0;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

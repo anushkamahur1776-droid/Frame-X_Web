@@ -98,7 +98,7 @@ export default function Home() {
   <nav className="navbar">
 
     <div className="nav-logo">
-      FRAME<span>-X</span>
+      {/* FRAME<span>-X</span> */}
     </div>
 
     <div className="nav-links">
@@ -131,9 +131,14 @@ export default function Home() {
       videos that engage, inspire people to act.
     </p>
 
-    <button className="hero-btn">
+    <a 
+      href="https://youtu.be/AFU3RJGYNTQ?si=3CQWOCiTwNUk-c-F" 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      className="hero-btn"
+    >
       WATCH INTRO
-    </button>
+    </a>
 
   </div>
 
