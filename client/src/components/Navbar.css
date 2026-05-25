@@ -24,9 +24,9 @@
   letter-spacing: 2px;
 }
 
-.nav-logo span {
-  color: #ff2a2a; /* Matched to your FRAME-X red! */
-}
+/* .nav-logo span {
+  color: #ae2012; 
+} */
 
 /* Hidden by default on desktop */
 .hamburger {
@@ -53,25 +53,25 @@
   color: white;
   text-decoration: none;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
   letter-spacing: 1px;
   transition: color 0.3s ease;
 }
 
-.nav-links a:hover {
-  color: #ff2a2a;
-}
+/* .nav-links a:hover {
+  color: #ae2012; 
+} */
 
 .nav-links .join-btn {
-  background-color: #e8b894;
+  background-color: #ee9b00; /* Gold/Yellow from your palette */
   color: #000;
-  padding: 10px 20px;
-  border-radius: 4px;
+  padding: 8px 20px;
+  border-radius: 6px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-links .join-btn:hover {
-  background-color: #fce1cc;
+  background-color: #e9d8a6; /* Cream/light gold from your palette */
   color: #000;
   transform: translateY(-2px);
 }

@@ -1,7 +1,7 @@
 /* src/pages/About.css */
 
 .about-page {
-background-color: #050505; /* Just a hair lighter than pitch black */
+  background-color: #050505; /* Just a hair lighter than pitch black - UNTOUCHED */
   
   /* Creates a faint, stylish dot pattern */
   background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
@@ -13,7 +13,7 @@ background-color: #050505; /* Just a hair lighter than pitch black */
 
 .hero-box {
   position: relative;
-  background-color: #ff2a2a; /* The exact FRAME-X red from your palette */
+  background-color: #ae2012; /* Vibrant red from your palette */
   margin: 0 4vw; 
   border-radius: 40px; 
   padding: 10px 20px;
@@ -24,7 +24,7 @@ background-color: #050505; /* Just a hair lighter than pitch black */
   align-items: center;
   text-align: center;
   overflow: hidden; 
-  box-shadow: 0 20px 50px rgba(255, 90, 90, 0.2); /* Red glow */
+  box-shadow: 0 20px 50px rgba(174, 32, 18, 0.2); /* Red glow matched to palette */
 }
 
 /* Black transparent outline for the watermark pattern */
@@ -98,7 +98,7 @@ background-color: #050505; /* Just a hair lighter than pitch black */
 
 /* The Left Panel */
 .dynamic-yellow-box {
-  background-color: #ffc800; /* IFP Yellow */
+  background-color: #ee9b00; /* Gold/Yellow from your palette */
   padding: 60px 50px;
   display: flex;
   align-items: center; 
@@ -131,7 +131,7 @@ background-color: #050505; /* Just a hair lighter than pitch black */
 }
 
 .stat-box {
-  background-color: #39ff14; /* IFP Neon Green */
+  background-color: #0a9396; /* Clean teal from your palette */
   border-radius: 30px;
   padding: 40px 30px;
   display: flex;
@@ -174,8 +174,8 @@ background-color: #050505; /* Just a hair lighter than pitch black */
 }
 
 /* Outer Container Colors */
-.purple-card { background-color: #7A00E6; }
-.orange-card { background-color: #FF9900; }
+.purple-card { background-color: #005f73; } /* Deep teal from your palette */
+.orange-card { background-color: #ca6702; } /* Burnt orange from your palette */
 
 /* Inner Box Shared Styles */
 .inner-box {
@@ -185,8 +185,8 @@ background-color: #050505; /* Just a hair lighter than pitch black */
 }
 
 /* Inner Box Specific Colors */
-.pink-box { background-color: #FF66CC; }
-.yellow-box { background-color: #FFD600; }
+.pink-box { background-color: #94d2bd; } /* Light aqua from your palette */
+.yellow-box { background-color: #e9d8a6; } /* Cream/light gold from your palette */
 
 /* Flex Sizing - Gives the text box more room than the image box */
 .image-box {
@@ -236,7 +236,7 @@ background-color: #050505; /* Just a hair lighter than pitch black */
 }
 
 .footer-content {
-  background-color: #0e0e0f; /* Slightly lighter than pitch black so it is visible against the page background */
+  background-color: #001219; /* The darkest blue/black from your palette */
   border-radius: 30px;
   padding: 40px 50px;
   display: flex;
@@ -266,7 +266,7 @@ background-color: #050505; /* Just a hair lighter than pitch black */
 }
 
 .footer-left .creator-credit {
-  color: #ff2a2a; /* The sharp FRAME-X Red */
+  color: #ae2012; /* Vibrant red from your palette */
   margin-top: 15px;
   font-size: 0.9rem;
   letter-spacing: 1px;

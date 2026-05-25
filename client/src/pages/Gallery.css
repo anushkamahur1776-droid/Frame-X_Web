@@ -1,0 +1,105 @@
+/* src/pages/Gallery.css */
+
+.gallery-page {
+  background-color: #0b0b0b; /* Matches your Projects page */
+  
+  /* The subtle studio dot grid */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 35px 35px;
+  
+  min-height: 100vh;
+  padding: 120px 5vw 80px 5vw; /* Heavy top padding so the navbar doesn't cover the title */
+  color: white;
+}
+
+/* --- HEADER SECTION --- */
+.gallery-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.gallery-header h1 {
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+/* .gallery-header span {
+  color: #ff2a2a; 
+} */
+
+.gallery-header p {
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+/* ========================================= */
+/* --- THE PINTEREST MASONRY MAGIC ---       */
+/* ========================================= */
+
+.masonry-grid {
+  /* This creates the columns automatically! */
+  column-count: 4; 
+  column-gap: 20px; 
+  width: 100%;
+}
+
+.masonry-item {
+  /* CRITICAL: Stops an image from being sliced in half across two columns */
+  break-inside: avoid; 
+  margin-bottom: 20px; 
+  position: relative;
+  border-radius: 12px; /* Pinterest's signature soft corners */
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.masonry-item img {
+  width: 100%;
+  height: auto; /* Allows images to be their natural heights */
+  display: block;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* Cinematic Hover Effect */
+.masonry-item:hover img {
+  transform: scale(1.05); /* Slight zoom */
+  filter: brightness(0.6); /* Darkens the image to look like a studio monitor */
+}
+
+/* ========================================= */
+/* --- MOBILE RESPONSIVENESS FIXES ---       */
+/* ========================================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+/* Phones */
+@media (max-width: 768px) {
+  .gallery-page {
+    padding-top: 100px;
+  }
+  
+  .masonry-grid {
+    column-count: 2; /* 2 columns looks best on standard phones */
+    column-gap: 15px;
+  }
+  
+  .masonry-item {
+    margin-bottom: 15px;
+    border-radius: 8px; /* Slightly sharper corners on small screens */
+  }
+}
+
+/* Extremely thin phones */
+@media (max-width: 480px) {
+  .masonry-grid {
+    column-count: 1; /* Drops to a single scrollable feed */
+  }
+}

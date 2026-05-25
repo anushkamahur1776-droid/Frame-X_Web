@@ -7,7 +7,7 @@ import About from "./pages/About";
 import Team from "./pages/Team";
 import Projects from "./pages/Projects";
 import Gallery from "./pages/Gallery";
-import Join from "./pages/Join";
+import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
@@ -23,7 +23,7 @@ export default function App() {
           <Route path="/team" element={<Team />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/gallery" element={<Gallery />} />
-          <Route path="/join" element={<Join />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </>
     );

@@ -1,0 +1,199 @@
+/* src/pages/Contact.css */
+
+.contact-page {
+  background-color: #0b0b0b; /* Main background - UNTOUCHED */
+  
+  /* The subtle studio dot grid */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 35px 35px;
+  
+  min-height: 100vh;
+  padding: 150px 5vw 80px 5vw; 
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  background-color: #001219; /* Darkest blue from your palette */
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 30px;
+  display: flex;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+/* --- LEFT SIDE: INFO --- */
+.contact-info {
+  flex: 1;
+  padding: 60px 50px;
+  background: linear-gradient(to bottom right, #001219, #005f73); /* Dark to Deep Teal fade */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-title {
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: clamp(3rem, 4vw, 4.5rem);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.contact-title span {
+  color: #ae2012; /* Vibrant Red */
+}
+
+.contact-desc {
+  font-size: 1.1rem;
+  color: #e5e5e5;
+  line-height: 1.6;
+  margin-bottom: 50px;
+  max-width: 90%;
+}
+
+.info-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.info-item h3 {
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 1rem;
+  color: #e9d8a6; /* Light Gold */
+  letter-spacing: 2px;
+  margin-bottom: 5px;
+}
+
+.info-item p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+}
+
+/* --- RIGHT SIDE: FORM --- */
+.contact-form-wrapper {
+  flex: 1.2;
+  padding: 60px 50px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* Floating Label Magic */
+.input-group {
+  position: relative;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  color: white;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #0a9396; /* Clean Teal border */
+  outline: none;
+  transition: border-color 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Hides the default empty placeholder so the label can float */
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: transparent; 
+}
+
+.input-group label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+/* When the user clicks the input, or if there is text inside it */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group textarea:focus ~ label,
+.input-group textarea:not(:placeholder-shown) ~ label {
+  top: -20px;
+  font-size: 0.85rem;
+  color: #ee9b00; /* Turns bright Gold */
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Highlight the bottom border when typing */
+.input-group input:focus,
+.input-group textarea:focus {
+  border-bottom-color: #ee9b00; /* Bright Gold */
+}
+
+/* Submit Button */
+.submit-btn {
+  background-color: #ae2012; /* Vibrant Red */
+  color: white;
+  padding: 16px 30px;
+  font-family: 'Arial Black', Impact, sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 10px;
+  align-self: flex-start; /* Keeps the button from stretching fully across */
+}
+
+.submit-btn:hover {
+  background-color: #bb3e03; /* Deep Burnt Orange */
+  transform: translateY(-3px);
+}
+
+/* ========================================= */
+/* --- MOBILE RESPONSIVENESS FIXES ---       */
+/* ========================================= */
+
+@media (max-width: 900px) {
+  .contact-page {
+    padding-top: 120px;
+    align-items: flex-start; /* Prevents it from getting cut off on short phones */
+  }
+
+  .contact-container {
+    flex-direction: column; /* Stacks the two columns */
+    border-radius: 20px;
+  }
+
+  .contact-info {
+    padding: 40px 30px;
+  }
+
+  .contact-form-wrapper {
+    padding: 40px 30px;
+  }
+
+  .contact-title {
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+  }
+
+  .submit-btn {
+    width: 100%; /* Full width button on mobile */
+  }
+}

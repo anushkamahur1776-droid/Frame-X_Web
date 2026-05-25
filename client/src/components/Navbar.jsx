@@ -14,7 +14,7 @@ export default function Navbar() {
       
       <div className="nav-logo">
         <Link to="/" onClick={closeMenu}>
-          FRAME<span>-X</span>
+          FRAME-X
         </Link>
       </div>
 
@@ -30,11 +30,11 @@ export default function Navbar() {
 
       {/* The Navigation Links */}
       <div className={`nav-links ${isOpen ? "nav-active" : ""}`}>
-        <Link to="/about" onClick={closeMenu}>ABOUT</Link>
-        <Link to="/team" onClick={closeMenu}>TEAM</Link>
-        <Link to="/projects" onClick={closeMenu}>PROJECTS</Link>
-        <Link to="/gallery" onClick={closeMenu}>GALLERY</Link>
-        <Link to="/join" className="join-btn" onClick={closeMenu}>JOIN US</Link>
+        <Link to="/about" onClick={closeMenu}>About</Link>
+        <Link to="/team" onClick={closeMenu}>Team</Link>
+        <Link to="/projects" onClick={closeMenu}>Projects</Link>
+        <Link to="/gallery" onClick={closeMenu}>Gallery</Link>
+        <Link to="/contact" className="join-btn" onClick={closeMenu}>Contact Us</Link>
       </div>
 
     </nav>
