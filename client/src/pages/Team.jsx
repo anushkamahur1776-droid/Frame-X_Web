@@ -51,7 +51,7 @@ export default function Team() {
       {/* --- RIGHT CONTENT (Team Roster) --- */}
       <main className="team-content">
         <div className="team-header">
-          <h1>FRAME-X <span>{activeYear}</span></h1>
+          <h1>TEAM <span>{activeYear}</span></h1>
           <p>The visionaries behind the lens.</p>
         </div>
 

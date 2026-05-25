@@ -62,7 +62,9 @@ export default function Home() {
           <p>
             The Filmmaking and Video Editing Society
           </p>
-
+          <p>
+            IIT Jodhpur
+          </p>
         </div>
 
         <div className="scroll-indicator">
