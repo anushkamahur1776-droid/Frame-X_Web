@@ -1,18 +1,33 @@
 import React from "react";
 import "./Gallery.css";
 
+import bts1 from "../assets/bts1.jpg";
+import bts2 from "../assets/bts2.jpg";
+import bts3 from "../assets/bts3.jpg";
+import bts4 from "../assets/bts4.jpg";
+import bts5 from "../assets/bts5.jpg";
+import bts6 from "../assets/bts6.jpg";
+import bts7 from "../assets/bts7.jpg";
+import bts8 from "../assets/bts8.jpg";
+import bts9 from "../assets/bts9.jpg";
+import bts10 from "../assets/bts10.jpg";
+import bts11 from "../assets/bts11.jpg";
+
 export default function Gallery() {
   // --- MOCK DATA ---
   // Replace these with your actual FRAME-X behind-the-scenes photos later!
   const galleryImages = [
-    { id: 1, src: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500&q=80", alt: "Behind the scenes 1" },
-    { id: 2, src: "https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?w=500&h=750&fit=crop", alt: "Camera rig" },
-    { id: 3, src: "https://images.unsplash.com/photo-1542204165-65bf26472b9b?w=500&q=80", alt: "Editing bay" },
-    { id: 4, src: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=500&h=800&fit=crop", alt: "Concert shoot" },
-    { id: 5, src: "https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=500&q=80", alt: "Film reel" },
-    { id: 6, src: "https://images.unsplash.com/photo-1516280440502-62b186b8cb71?w=500&h=600&fit=crop", alt: "Lighting setup" },
-    { id: 7, src: "https://images.unsplash.com/photo-1574267432553-4b4628081524?w=500&q=80", alt: "Director pointing" },
-    { id: 8, src: "https://images.unsplash.com/photo-1493225457124-a1a2a5ea3761?w=500&h=700&fit=crop", alt: "Lens close up" },
+    { id: 1, src: bts1, alt: "1" },
+    { id: 2, src: bts2, alt: "2" },
+    { id: 3, src: bts3, alt: "3" },
+    { id: 4, src: bts4, alt: "4" },
+    { id: 5, src: bts5, alt: "5" },
+    { id: 6, src: bts6, alt: "6" },
+    { id: 7, src: bts7, alt: "7" },
+    { id: 8, src: bts8, alt: "8" },
+    { id: 9, src: bts9, alt: "9" },
+    { id: 10, src: bts10, alt: "10" },
+    { id: 11, src: bts11, alt: "11" },
   ];
 
   return (

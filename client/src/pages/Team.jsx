@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./Team.css";
 
+import Anushka from "../assets/Anushka.jpeg";
+
 export default function Team() {
   // --- MOCK DATABASE ---
   // The keys (e.g., "2025-2026") automatically become your sidebar buttons!
   const teamArchive = {
     "2025-2026": [
-      { id: 1, name: "Anushka Mahur", role: "Secretary", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&q=80" },
+      { id: 1, name: "Anushka Mahur", role: "Secretary", image: Anushka },
       { id: 2, name: "Harshwardhan Singh", role: "Joint Secretary", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&q=80" },
       { id: 3, name: "Buddhi Prakash Mali", role: "Joint Secretary", image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&q=80" },
       { id: 4, name: "Sujay Manti", role: "Joint Secretary", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80" }
