@@ -67,7 +67,7 @@ export default function About() {
             <h2>HERE IS WHAT WE HAVE ACHIEVED SO FAR</h2>
           </motion.div>
 
-          {/* ANIMATED GREEN STAT BOXES */}
+          {/* ANIMATED GREEN STAT Boxes */}
           <div className="stats-grid">
             
             <motion.div className="stat-box" style={{ x: g1X }}>
@@ -151,17 +151,37 @@ export default function About() {
       {/* --- NEW FOOTER SECTION --- */}
       <footer className="site-footer">
         <div className="footer-content">
+          
+          {/* Left: Text Info & Socials */}
           <div className="footer-left">
             <h2>FRAME-X</h2>
             <p>Shaping Cinema One Frame at a Time &nbsp;|&nbsp; Copyright 2026</p>
             <p className="creator-credit">Website Developed by Anushka Mahur (Secretary, 2025-26)</p>
-          </div>
           
+            {/* Social Links exactly under the text */}
+            <div className="footer-socials">
+              <a href="https://www.linkedin.com/company/frame-x-iit-jodhpur/" target="_blank" rel="noreferrer" className="footer-social-link">
+                <i className="fa-brands fa-linkedin-in"></i>
+              </a>
+              <a href="https://www.instagram.com/framex_iitj" target="_blank" rel="noreferrer" className="footer-social-link">
+                <i className="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://youtube.com/@framex_iitj" target="_blank" rel="noreferrer" className="footer-social-link">
+                <i className="fa-brands fa-youtube"></i>
+              </a>
+              <a href="https://www.facebook.com/frameX.iitj" target="_blank" rel="noreferrer" className="footer-social-link">
+                <i className="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+
+          {/* Right: Logo */}
           <div className="footer-right">
             <div className="footer-logo-placeholder">
               <span><img src={logoImg} alt="FRAME-X Logo" className="footer-logo" /></span>
             </div>
           </div>
+
         </div>
       </footer>
 

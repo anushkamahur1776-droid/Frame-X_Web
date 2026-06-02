@@ -33,8 +33,7 @@
 
 .sidebar-title {
   font-family: 'Arial Black', Impact, sans-serif;
-  /* font-size: rem; */
-  letter-spacing: px;
+  letter-spacing: 1px;
   margin-bottom: 40px;
 }
 
@@ -161,9 +160,9 @@
   left: 0;
   width: 100%;
   background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, transparent 100%);
-  padding: 30px 20px 20px 20px;
-  transform: translateY(10px);
-  transition: transform 0.3s ease;
+  padding: 40px 20px 25px 20px;
+  transform: translateY(55px); /* Lowered slightly to hide icons initially */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1);
 }
 
 .team-card:hover .member-info {
@@ -183,6 +182,67 @@
   font-weight: bold;
   font-size: 0.8rem;
   text-transform: uppercase;
+}
+
+/* ========================================= */
+/* --- SOCIAL LINKS (3D CIRCLES)             */
+/* ========================================= */
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease 0.1s; /* Slight delay to cascade in after the text */
+}
+
+.team-card:hover .social-links {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.social-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #a0a0a0;
+  font-size: 1.1rem;
+  
+  /* The 3D Dark Neumorphic Aesthetic */
+  background: linear-gradient(145deg, #1e2025, #121316);
+  box-shadow: 
+    4px 4px 8px rgba(0, 0, 0, 0.8), /* Dark drop shadow */
+    -2px -2px 6px rgba(255, 255, 255, 0.05), /* Subtle top-left highlight */
+    inset 1px 1px 1px rgba(255, 255, 255, 0.08); /* Inner rim highlight */
+    
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* The Hover Pop for the 3D circles */
+.social-circle:hover {
+  transform: translateY(-4px) scale(1.1);
+}
+
+/* Brand specific glowing styles on hover */
+.social-circle.linkedin:hover {
+  color: white;
+  background: linear-gradient(145deg, #0077b5, #005e93);
+  box-shadow: 
+    0px 8px 15px rgba(0, 119, 181, 0.4),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.social-circle.instagram:hover {
+  color: white;
+  background: linear-gradient(145deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  box-shadow: 
+    0px 8px 15px rgba(220, 39, 67, 0.4),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.3);
 }
 
 /* ========================================= */
