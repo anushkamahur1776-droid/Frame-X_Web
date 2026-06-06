@@ -399,6 +399,20 @@ body{
     letter-spacing: 5px; /* Reduced tracking for smaller screens */
   }
 
+  .home-logo {
+  height: 100px; /* Adjust this number to make it bigger or smaller! */
+  width: auto;
+  object-fit: contain; /* Prevents stretching */
+  }
+
+  .home-reel {
+  width: 100%; /* Makes it fit perfectly inside whatever box it is in */
+  max-width: 1000px; /* Optional: Stops it from getting too wide on massive monitors */
+  height: auto;
+  border-radius: 20px; /* Optional: Gives it clean, curved cinematic edges! */
+  object-fit: cover; 
+  }
+
   .logo-image {
     width: 120px; /* Scaled down the red logo slightly */
   }

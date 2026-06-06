@@ -51,7 +51,11 @@ export default function Home() {
 
         <div className="intro-content">
 
-          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Frame-X Logo" />
+          <img 
+          src={`${import.meta.env.BASE_URL}logo.png`} 
+          alt="Frame-X Logo" 
+          className="home-logo" 
+          />
 
           <h1>FRAME-X</h1>
 
@@ -73,7 +77,11 @@ export default function Home() {
 
       <section className={`video-section ${startVideo ? "show-video" : ""}`}>
 
-        <video src={`${import.meta.env.BASE_URL}reel.mp4`} autoPlay loop muted />
+        <video 
+        src={`${import.meta.env.BASE_URL}reel.mp4`} 
+        autoPlay loop muted 
+        className="home-reel" 
+        />
 
         <div className="video-overlay"></div>
 
