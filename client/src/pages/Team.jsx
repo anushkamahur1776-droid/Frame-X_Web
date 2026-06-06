@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import "./Team.css";
 
 import Anushka from "../assets/Anushka.jpeg";
+import Harsh from "../assets/Harsh.jpg";
+import Buddhi from "../assets/Buddhi.jpg";
+import Kunjesh from "../assets/Kunjesh.jpg";
+import Dhruv from "../assets/Dhruv.jpg";
 
 export default function Team() {
   // --- MOCK DATABASE ---
@@ -9,19 +13,19 @@ export default function Team() {
   // I added 'linkedin' and 'instagram' fields to each member for your new 3D buttons.
   const teamArchive = {
     "2025-2026": [
-      { id: 1, name: "Anushka Mahur", role: "Secretary", image: Anushka, linkedin: "https://linkedin.com", instagram: "https://instagram.com" },
-      { id: 2, name: "Harshwardhan Singh", role: "Joint Secretary", image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&q=80", linkedin: "https://linkedin.com", instagram: "https://instagram.com" },
-      { id: 3, name: "Buddhi Prakash Mali", role: "Joint Secretary", image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&q=80", linkedin: "https://linkedin.com", instagram: "https://instagram.com" },
-      { id: 4, name: "Sujay Manti", role: "Joint Secretary", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80", linkedin: "https://linkedin.com", instagram: "https://instagram.com" }
+      { id: 1, name: "Anushka Mahur", role: "Secretary", image: Anushka, linkedin: "www.linkedin.com/in/anushka-mahur-a5a69131b", instagram: "https://www.instagram.com/_anushkamahur_" },
+      { id: 2, name: "Harshwardhan Singh", role: "Joint Secretary", image: Harsh, linkedin: "https://linkedin.com", instagram: "https://www.instagram.com/harshwardhan__7237" },
+      { id: 3, name: "Buddhi Prakash Mali", role: "Joint Secretary", image: Buddhi, linkedin: "https://www.linkedin.com/in/buddhiprakash", instagram: "https://www.instagram.com/_vipul__saini" },
+      { id: 4, name: "Sujay Manti", role: "Joint Secretary", image: "", linkedin: "", instagram: "" }
     ],
     "2024-2025": [
-      { id: 5, name: "Kunjesh Diswal", role: "Secretary", image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=500&q=80", linkedin: "https://linkedin.com", instagram: "https://instagram.com" },
-      { id: 6, name: "Maulik Dave", role: "Joint Secretary", image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&q=80", linkedin: "https://linkedin.com", instagram: "https://instagram.com" },
-      { id: 7, name: "Abhijit", role: "Joint Secretary", image: "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=500&q=80", linkedin: "https://linkedin.com", instagram: "https://instagram.com" },
-      { id: 8, name: "Dhanush", role: "Member", image: "https://images.unsplash.com/photo-1517841905240-472988babdf9?w=500&q=80", linkedin: "https://linkedin.com", instagram: "https://instagram.com" }
+      { id: 5, name: "Kunjesh Disawal", role: "Secretary", image: Kunjesh, linkedin: "https://www.linkedin.com/in/kunjeshdisawal", instagram: "https://www.instagram.com/kunjeshdisawal" },
+      { id: 6, name: "Maulik Dave", role: "Joint Secretary", image: "https://image.unsplash.com/photo-1517841905240-472988babdf9?w=500&q=80", linkedin: "https://www.linkedin.com/in/maulik-dave-82a058280/", instagram: "https://www.instagram.com/maulik_d2005?igsh=MWdmdmlyZGJtMzFmMA==" },
+      { id: 7, name: "Abhijeet Kumar", role: "Joint Secretary", image: "https://images.usplash.com/photo-1492562080023-ab3db95bfbce?w=500&q=80", linkedin: "https://www.linkedin.com/in/abhijeet-kumar-keshri-967080295/", instagram: "https://www.instagram.com/abhijeet_kumar_keshri?igsh=MXB5dTNta3ZlZDI4aA==" },
+      { id: 8, name: "Dhruv Tiwari ", role: "Member", image: Dhruv, linkedin: "https://in.linkedin.com/in/dhruv-kumar-tiwari-9a5405280", instagram: "https://www.instagram.com/_dhruv_985?igsh=MXE3NXNpNjJjZXNjMg==" }
     ],
     "2023-2024": [
-      { id: 9, name: "Rahul Dev", role: "Founder", image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&q=80", linkedin: "https://linkedin.com", instagram: "https://instagram.com" }
+      { id: 9, name: "Sidharth Bajaj", role: "Secretary", image: "", linkedin: "", instagram: "" }
     ]
   };
 
