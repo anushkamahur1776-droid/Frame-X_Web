@@ -2,145 +2,100 @@ import "../index.css";
 import { useEffect, useRef, useState } from "react";
 
 export default function Home() {
-
   const [startVideo, setStartVideo] = useState(false);
-
   const videoRef = useRef(null);
 
   useEffect(() => {
-
     const handleScroll = async () => {
-
       if(window.scrollY > 50){
-
         setStartVideo(true);
-
         try{
-          await videoRef.current.play();
+          if (videoRef.current) {
+            await videoRef.current.play();
+          }
         }
         catch(err){
           console.log(err);
         }
-
       }
       else{
-
         setStartVideo(false);
-
-        videoRef.current.pause();
-
+        if (videoRef.current) {
+          videoRef.current.pause();
+        }
       }
-
     };
 
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
-
   }, []);
 
   return (
-
     <div className="page">
 
       {/* INTRO */}
-
       <section className={`intro ${startVideo ? "fade-out" : ""}`}>
-
         <div className="intro-glow"></div>
-
         <div className="intro-content">
-
           <img 
-          src={`${import.meta.env.BASE_URL}logo.png`} 
-          alt="Frame-X Logo" 
-          className="home-logo" 
+            src={`${import.meta.env.BASE_URL}logo.png`} 
+            alt="Frame-X Logo" 
+            className="home-logo" 
           />
-
           <h1>FRAME-X</h1>
-
-          <p>
-            The Filmmaking and Video Editing Society
-          </p>
-          <p>
-            IIT Jodhpur
-          </p>
+          <p>The Filmmaking and Video Editing Society</p>
+          <p>IIT Jodhpur</p>
         </div>
-
-        <div className="scroll-indicator">
-          SCROLL
-        </div>
-
+        <div className="scroll-indicator">SCROLL</div>
       </section>
 
       {/* VIDEO SECTION */}
-
       <section className={`video-section ${startVideo ? "show-video" : ""}`}>
-
         <video 
-        src={`${import.meta.env.BASE_URL}reel.mp4`} 
-        autoPlay loop muted 
-        className="home-reel" 
+          ref={videoRef}
+          src={`${import.meta.env.BASE_URL}reel.mp4`} 
+          autoPlay 
+          loop 
+          muted 
+          className="home-reel" 
         />
-
         <div className="video-overlay"></div>
-
       </section>
 
       {/* HOME PAGE */}
       <section className="home">
+        
+        {/* NAVBAR */}
+        <nav className="navbar">
+          <div className="nav-logo">
+            FRAME-X
+          </div>
+        </nav>
 
-  {/* NAVBAR */}
-
-  <nav className="navbar">
-
-    <div className="nav-logo">
-      {/* FRAME<span>-X</span> */}
-    </div>
-
-    <div className="nav-links">
-      <a href="/About"></a>
-      <a href="/gallery"></a>
-      <a href="/projects"></a>
-      <a href="/team"></a>
-      <a href="/join"></a>
-    </div>
-
-  </nav>
-
-  {/* HERO CONTENT */}
-
-  <div className="hero-content">
-
-    <p className="small-heading">
-      THE FILMMAKING AND VIDEO EDITING SOCIETY
-    </p>
-
-    <div className="red-line"></div>
-
-    <h2>
-      STORIES BEYOND FRAMES
-    </h2>
-
-    <p className="hero-text">
-      Our approach combines expertise & passion with a 
-      deep understanding of you and your audience to make 
-      videos that engage, inspire people to act.
-    </p>
-
-    <a 
-      href="https://youtu.be/AFU3RJGYNTQ?si=3CQWOCiTwNUk-c-F" 
-      target="_blank" 
-      rel="noopener noreferrer" 
-      className="hero-btn"
-    >
-      WATCH INTRO
-    </a>
-
-  </div>
-
-</section>
+        {/* HERO CONTENT */}
+        <div className="hero-content">
+          <p className="small-heading">
+            THE FILMMAKING AND VIDEO EDITING SOCIETY
+          </p>
+          <div className="red-line"></div>
+          <h2>
+            STORIES BEYOND FRAMES
+          </h2>
+          <p className="hero-text">
+            Our approach combines expertise & passion with a 
+            deep understanding of you and your audience to make 
+            videos that engage, inspire people to act.
+          </p>
+          <a 
+            href="https://youtu.be/AFU3RJGYNTQ" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="hero-btn"
+          >
+            WATCH INTRO
+          </a>
+        </div>
+      </section>
     </div>
   );
 }
-
