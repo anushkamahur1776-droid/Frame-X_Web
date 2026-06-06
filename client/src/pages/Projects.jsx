@@ -8,8 +8,16 @@ import Unveiled from "../assets/Unveiled.jpg";
 import Verity from "../assets/Verity.jpg";
 import Trapped from "../assets/Trapped.jpg";
 
-import CS26 from "../assets/CS26.jpg";
+import CS25 from "../assets/CS25.jpg";
+import CS24 from "../assets/CS24.jpg";
+import CS23 from "../assets/CS23.jpg";
+import CS22 from "../assets/CS22.jpg";
+
 import FI25Th from "../assets/FI25Th.png";
+import FI24Th from "../assets/FI24Th.png";
+import FI23Th from "../assets/FI23Th.png";
+import FI22Th from "../assets/FI22Th.png";
+import FI21Th from "../assets/FI21Th.png";
 
 import ZulfeinTh from "../assets/ZulfeinTh.png";
 import UITE from "../assets/UITE.jpg";
@@ -42,29 +50,30 @@ export default function Projects() {
     {
       title: "Music Videos",
       projects: [
-        { id: 6, title: "2026", image: ZulfeinTh },
-        { id: 7, title: "2025", image: UITE },
-        { id: 8, title: "2024", image: Dori },
-        { id: 9, title: "2022", image: InDino },
-        { id: 10, title: "2019", image: MakeYouMine },
+        { id: 6, title: "2026", image: ZulfeinTh, url:"https://youtu.be/amZUvxYLh_Y?si=gPHzaiYKySUPSC43" },
+        { id: 7, title: "2025", image: UITE, url:"https://youtu.be/KO5vkcHuggI?si=79om0xIxWmiwqLnV" },
+        { id: 8, title: "2024", image: Dori, url:"https://youtu.be/MbMzC7zUaXI?si=FniSEF2VD1K5hLlu" },
+        { id: 9, title: "2022", image: InDino, url:"https://youtu.be/9pCkt4odKwo?si=YtP0e6z0d8WqK9UF" },
+        { id: 10, title: "2019", image: MakeYouMine, url:"https://youtu.be/Kguvr7Ypvsk?si=QqpYYV6qPLRiBdEK" },
       ]
     },
     {
       title: "Class Songs",
       projects: [
-        { id: 11, title: "2026 1", image: CS26 },
-        { id: 12, title: "Highlight 2", image: "https://images.unsplash.com/photo-1533174000255-1b4d05459346?q=80&w=600&auto=format&fit=crop" },
-        { id: 13, title: "Highlight 3", image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=600&auto=format&fit=crop" },
-        { id: 14, title: "Highlight 4", image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=600&auto=format&fit=crop" },
+        { id: 11, title: "2025", image: CS25, url:"https://youtu.be/HaPrFKxuQ0U?si=CwiCCbG22apCVZmN" },
+        { id: 12, title: "2024", image: CS24, url:"https://youtu.be/5X6G7yldIdU?si=F_N9puPtVVAa7QHe" },
+        { id: 13, title: "2023", image: CS23, url:"https://youtu.be/QK1i1vPLR8Y?si=b46BQTxEMB8Xgl-T" },
+        { id: 14, title: "2022", image: CS22, url:"https://youtu.be/XB2IRd6sqQU?si=ZOLagH_10UP_Kah8" },
       ]
     },
     {
       title: "Freshers Introduction Videos",
       projects: [
-        { id: 11, title: "Video 2026", image: FI25Th },
-        { id: 12, title: "Highlight 2", image: "https://images.unsplash.com/photo-1533174000255-1b4d05459346?q=80&w=600&auto=format&fit=crop" },
-        { id: 13, title: "Highlight 3", image: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=600&auto=format&fit=crop" },
-        { id: 14, title: "Highlight 4", image: "https://images.unsplash.com/photo-1501281668745-f7f57925c3b4?q=80&w=600&auto=format&fit=crop" },
+        { id: 11, title: "2025", image: FI25Th, url:"https://youtu.be/d_SRRx8cW40?si=dq48x07RpvxtLl_f" },
+        { id: 12, title: "2024", image: FI24Th, url:"https://youtu.be/M9x9MnvSRkc?si=kO5hFtX_LWsmg-PX" },
+        { id: 13, title: "2023", image: FI23Th, url:"https://youtu.be/Ktozs0TPjME?si=Lj1uAU3S8P_LG72U" },
+        { id: 14, title: "2022", image: FI22Th, url:"https://youtu.be/939UdjhgOSI?si=PmatbknNQyluMiuF" },
+        { id: 13, title: "2021", image: FI21Th, url:"https://youtu.be/a3kmCkvJiZI?si=InlgH2jCNYpSImOp" },
       ]
     }
   ];
