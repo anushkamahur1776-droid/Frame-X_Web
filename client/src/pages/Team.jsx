@@ -3,7 +3,7 @@ import "./Team.css";
 
 import Anushka from "../assets/Anushka.jpeg";
 import Harsh from "../assets/Harsh.jpg";
-import Buddhi from "../assets/Buddhi.jpg";
+import Buddhi from "../assets/Buddhi.JPG";
 import Kunjesh from "../assets/Kunjesh.jpg";
 import Dhruv from "../assets/Dhruv.jpg";
 
