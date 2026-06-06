@@ -2,7 +2,9 @@ import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import "./About.css"; 
 
+import Stock from "../assets/Stock.webp";
 import logoImg from "../assets/logo.png";
+import Intro from "../assets/Intro.png";
 
 export default function About() {
   const watermarkText = "ABOUT FRAME-X ".repeat(60);
@@ -107,7 +109,10 @@ export default function About() {
         >
           {/* Left Side: Image */}
           <div className="inner-box pink-box image-box">
-            <p>[Image Placeholder]</p>
+            <img 
+            src={Stock} 
+            alt="Cinema through time" 
+            />
           </div>
           
           {/* Right Side: Text */}
@@ -136,13 +141,16 @@ export default function About() {
             <h2>WHAT WE DO</h2>
             <h3>FRAME-X CHALLENGES AND FESTIVALS</h3>
             <p>
-              We host an array of competitions, workshops, and flagship events that push creators to their limits. From 48-hour filmmaking challenges to masterclasses in post-production editing, we provide the platform for you to showcase your talent.
+              We host an array of competitions, workshops, and flagship events that push creators to their limits. From freshers' filmmaking challenges to masterclasses in post-production editing, we provide the platform for you to showcase your talent.
             </p>
           </div>
 
           {/* Right Side: Image */}
           <div className="inner-box yellow-box image-box">
-            <p>[Image Placeholder]</p>
+            <img 
+            src={Intro} 
+            alt=" Intro" 
+            />
           </div>
         </motion.div>
 

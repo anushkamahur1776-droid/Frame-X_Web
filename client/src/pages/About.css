@@ -160,9 +160,9 @@
 .nested-cards-section {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
   padding: 0 4vw;
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 .nested-card {
@@ -196,7 +196,15 @@
   justify-content: center;
   font-weight: bold;
   opacity: 0.8;
-  border: 2px dashed rgba(0,0,0,0.2);
+}
+
+.image-box img {
+  width: 100%;
+  max-height: 450px; /* This is the magic lock that stops it from growing! */
+  height: auto;
+  object-fit: contain; /* Shrinks the film strip to fit inside the box */
+  display: block;
+  border-radius: 30px;
 }
 
 .text-box {

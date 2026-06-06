@@ -12,7 +12,7 @@
   padding: 0 5vw;
   background-color: rgba(0, 0, 0, 0.85); 
   backdrop-filter: blur(10px); 
-  z-index: 1000; 
+  z-index: 100; 
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -63,17 +63,17 @@
 } */
 
 .nav-links .join-btn {
-  background-color: #ee9b00; /* Gold/Yellow from your palette */
-  color: #000;
+  background-color: #cf2d1e; /* Gold/Yellow from your palette */
+  color: #ffffff;
   padding: 8px 20px;
-  border-radius: 6px;
+  border-radius: 9px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .nav-links .join-btn:hover {
-  background-color: #e9d8a6; /* Cream/light gold from your palette */
-  color: #000;
-  transform: translateY(-2px);
+  background: #ff5757;
+  transform: translateY(-4px);
+  color: #fff;
 }
 
 /* ========================================= */

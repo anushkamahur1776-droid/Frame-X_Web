@@ -20,7 +20,7 @@ export default function Contact() {
     {
       id: 3,
       question: "What kind of projects does the society work on?",
-      answer: "We work on short films, documentaries, music videos, and cinematic aftermovies for college fests. We also host 48-hour film challenges and scriptwriting workshops."
+      answer: "We work on short films, documentaries, music videos, and cinematic aftermovies for college fests. We also host film challenges and scriptwriting workshops."
     },
     {
       id: 4,

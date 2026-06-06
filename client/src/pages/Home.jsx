@@ -92,7 +92,7 @@ export default function Home() {
             rel="noopener noreferrer" 
             className="hero-btn"
           >
-            WATCH INTRO
+            Watch Intro
           </a>
         </div>
       </section>
