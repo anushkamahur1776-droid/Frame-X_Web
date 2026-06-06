@@ -8,7 +8,7 @@ import "./index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 
-  <BrowserRouter>
+  <BrowserRouter basename="/Frame-X_Web">
 
     <App />
 
