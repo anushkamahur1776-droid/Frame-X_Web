@@ -46,7 +46,7 @@ export default function About() {
           <h1 className="hero-box-title">WHO WE ARE</h1>
           <p className="hero-box-description">
             Frame-X is a cultural society that celebrates creativity under filmmaking. 
-            From storytelling and design to music, film, and beyond — we exist to build 
+            From storytelling and design to music, film, and beyond. We exist to build 
             a thriving ecosystem for creators and communities.
           </p>
         </div>

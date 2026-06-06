@@ -11,23 +11,27 @@ import bts7 from "../assets/bts7.jpg";
 import bts8 from "../assets/bts8.jpg";
 import bts9 from "../assets/bts9.jpg";
 import bts10 from "../assets/bts10.jpg";
-import bts11 from "../assets/bts11.jpg";
+import bts12 from "../assets/bts12.jpeg";
+import bts13 from "../assets/bts13.jpeg";
+import bts14 from "../assets/bts14.jpeg";
 
 export default function Gallery() {
   // --- MOCK DATA ---
   // Replace these with your actual FRAME-X behind-the-scenes photos later!
   const galleryImages = [
+    { id: 12, src: bts12, alt: "12" },
+    { id: 14, src: bts14, alt: "11" },
+    { id: 13, src: bts13, alt: "11" },
     { id: 1, src: bts1, alt: "1" },
     { id: 2, src: bts2, alt: "2" },
     { id: 3, src: bts3, alt: "3" },
     { id: 4, src: bts4, alt: "4" },
+    { id: 10, src: bts10, alt: "10" },
     { id: 5, src: bts5, alt: "5" },
     { id: 6, src: bts6, alt: "6" },
     { id: 7, src: bts7, alt: "7" },
     { id: 8, src: bts8, alt: "8" },
     { id: 9, src: bts9, alt: "9" },
-    { id: 10, src: bts10, alt: "10" },
-    { id: 11, src: bts11, alt: "11" },
   ];
 
   return (

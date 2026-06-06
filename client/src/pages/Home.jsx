@@ -82,9 +82,9 @@ export default function Home() {
             STORIES BEYOND FRAMES
           </h2>
           <p className="hero-text">
-            Our approach combines expertise & passion with a 
-            deep understanding of you and your audience to make 
-            videos that engage, inspire people to act.
+             Frame-X is the creative home for filmmakers, editors, and visual storytellers at IIT Jodhpur. 
+             We foster innovation through workshops, productions, competitions, and collaborative projects, 
+             helping students develop their craft while creating meaningful stories that resonate beyond the screen.
           </p>
           <a 
             href="https://youtu.be/AFU3RJGYNTQ" 

@@ -31,7 +31,7 @@ export default function Projects() {
   
   const featuredProject = {
     title: "New release",
-    description: "When a tiny but tough new recruit lands a spot on the main crew, they must prove themselves in the ultimate 48-hour filmmaking challenge.",
+    description: "As we explore the thin line between dreams and reality, where a fleeting glimpse of someone special turns into a vivid, romantic escape. Did it happen, or was it just a dream? Watch until the end to find out.",
     image: ZulfeinTh, 
     // rating: "U/A 13+"
   };
