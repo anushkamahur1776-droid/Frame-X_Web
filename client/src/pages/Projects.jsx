@@ -14,10 +14,10 @@ import CS23 from "../assets/CS23.jpg";
 import CS22 from "../assets/CS22.jpg";
 
 import FI25Th from "../assets/FI25Th.png";
-import FI24Th from "../assets/FI24Th.png";
-import FI23Th from "../assets/FI23Th.png";
-import FI22Th from "../assets/FI22Th.png";
-import FI21Th from "../assets/FI21Th.png";
+import FI24Th from "../assets/FI24Th.jpg";
+import FI23Th from "../assets/FI23Th.jpg";
+import FI22Th from "../assets/FI22Th.jpg";
+import FI21Th from "../assets/FI21Th.jpg";
 
 import ZulfeinTh from "../assets/ZulfeinTh.png";
 import UITE from "../assets/UITE.jpg";
@@ -58,15 +58,6 @@ export default function Projects() {
       ]
     },
     {
-      title: "Class Songs",
-      projects: [
-        { id: 11, title: "2025", image: CS25, url:"https://youtu.be/HaPrFKxuQ0U?si=CwiCCbG22apCVZmN" },
-        { id: 12, title: "2024", image: CS24, url:"https://youtu.be/5X6G7yldIdU?si=F_N9puPtVVAa7QHe" },
-        { id: 13, title: "2023", image: CS23, url:"https://youtu.be/QK1i1vPLR8Y?si=b46BQTxEMB8Xgl-T" },
-        { id: 14, title: "2022", image: CS22, url:"https://youtu.be/XB2IRd6sqQU?si=ZOLagH_10UP_Kah8" },
-      ]
-    },
-    {
       title: "Freshers Introduction Videos",
       projects: [
         { id: 11, title: "2025", image: FI25Th, url:"https://youtu.be/d_SRRx8cW40?si=dq48x07RpvxtLl_f" },
@@ -74,6 +65,15 @@ export default function Projects() {
         { id: 13, title: "2023", image: FI23Th, url:"https://youtu.be/Ktozs0TPjME?si=Lj1uAU3S8P_LG72U" },
         { id: 14, title: "2022", image: FI22Th, url:"https://youtu.be/939UdjhgOSI?si=PmatbknNQyluMiuF" },
         { id: 13, title: "2021", image: FI21Th, url:"https://youtu.be/a3kmCkvJiZI?si=InlgH2jCNYpSImOp" },
+      ]
+    },
+    {
+      title: "Class Songs",
+      projects: [
+        { id: 11, title: "2025", image: CS25, url:"https://youtu.be/HaPrFKxuQ0U?si=CwiCCbG22apCVZmN" },
+        { id: 12, title: "2024", image: CS24, url:"https://youtu.be/5X6G7yldIdU?si=F_N9puPtVVAa7QHe" },
+        { id: 13, title: "2023", image: CS23, url:"https://youtu.be/QK1i1vPLR8Y?si=b46BQTxEMB8Xgl-T" },
+        { id: 14, title: "2022", image: CS22, url:"https://youtu.be/XB2IRd6sqQU?si=ZOLagH_10UP_Kah8" },
       ]
     }
   ];
